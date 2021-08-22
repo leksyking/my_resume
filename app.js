@@ -14,7 +14,7 @@ app.get("/contact.html", (req, res) =>{
     res.sendFile(__dirname + "/contact.html");
 } )
 
-app.post("/contact.html", (req, res) => {
+app.post("/", (req, res) => {
     const name = req.body.YourName;
     const email = req.body.Email;
     const message = req.body.message;
@@ -22,4 +22,4 @@ app.post("/contact.html", (req, res) => {
     res.send(`${name}! Thank you for contacting me!`);
 })
 
-app.listen(process.env.PORT, () => console.log('Starting app.'));
+app.listen(process.env.PORT || 3000, () => console.log('Starting app.'));
