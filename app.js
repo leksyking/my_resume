@@ -22,4 +22,4 @@ app.post("/", (req, res) => {
     res.send(`${name}! Thank you for contacting me!`);
 })
 
-app.listen(process.env.PORT || 3000, () => console.log('Starting app.'));
+app.listen(process.env.PORT, () => console.log('Starting app.'));
